@@ -59,8 +59,7 @@ public class Convert
     private BufferedImage rezise()
     {
         int sizeX = 200;
-        double temp = img.getHeight() * ((double) 200 / img.getHeight());
-        int sizeY = (int) temp;
+        int sizeY = (200 * img.getHeight()) / img.getWidth();
         BufferedImage dimg = new BufferedImage(sizeX, sizeY, img.getType());
         Graphics2D g2d = dimg.createGraphics();
         g2d.drawImage(img, 0, 0, sizeX, sizeY, null);
