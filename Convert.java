@@ -51,15 +51,15 @@ public class Convert
 
     public int start()
     {
-        img = rezise();
+        img = resize();
         toGrey();
         return toAscii();
     }
 
-    private BufferedImage rezise()
+    private BufferedImage resize()
     {
         int sizeX = 200;
-        int sizeY = (200 * img.getHeight()) / img.getWidth();
+        int sizeY = (100 * img.getHeight()) / img.getWidth();
         BufferedImage dimg = new BufferedImage(sizeX, sizeY, img.getType());
         Graphics2D g2d = dimg.createGraphics();
         g2d.drawImage(img, 0, 0, sizeX, sizeY, null);
